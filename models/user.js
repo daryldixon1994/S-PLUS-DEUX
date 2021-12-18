@@ -19,6 +19,14 @@ const UserSchema = new Schema(
             type: Boolean,
             default: true,
         },
+        isBanned: {
+            type: Boolean,
+            default: false,
+        },
+        rate: {
+            type: "number",
+            default: 0,
+        },
     },
     { timestamps: true }
 );

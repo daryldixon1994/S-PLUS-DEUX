@@ -19,6 +19,14 @@ const PostSchema = new Schema(
             type: "number",
             required: true,
         },
+        type: {
+            type: "string",
+            required: true,
+        },
+        purpose:{
+            type: "string",
+            required: true
+        },
         city: {
             type: "string",
             required: true,
@@ -48,8 +56,7 @@ const PostSchema = new Schema(
             required: true,
         },
         photos: {
-            type: "string",
-            default: "/uploads/addPhotos.jpg",
+            type: ["string"],
         },
         isReported: {
             type: Boolean,

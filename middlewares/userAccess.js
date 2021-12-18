@@ -3,7 +3,7 @@ module.exports = async (req, res, next) => {
     try {
         let { id } = req.params;
         const user = await User.findById(id);
-        if (user.isUser) {
+        if (user.isUser && !user.isBanned) {
             next();
         } else {
             return res

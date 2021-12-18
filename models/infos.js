@@ -20,15 +20,6 @@ const InfosSchema = new Schema(
         },
         age: {
             type: "number",
-            required: true,
-        },
-        isAdmin: {
-            type: Boolean,
-            default: false,
-        },
-        isUser: {
-            type: Boolean,
-            default: true,
         },
         isReported: {
             type: Boolean,
@@ -48,7 +39,6 @@ const InfosSchema = new Schema(
         },
         gender: {
             type: "string",
-            required: true,
         },
         occupation: {
             type: "string",

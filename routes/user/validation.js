@@ -30,7 +30,10 @@ const RegisterValidation = (data) => {
             .required()
             .label("Confirm password")
             .options({
-                messages: { "any.only": "Confirm password does not match" },
+                messages: {
+                    "any.only": "Confirm password does not match",
+                    "any.required": "Please confirm your password",
+                },
             }),
     });
     return schema.validate(data);
