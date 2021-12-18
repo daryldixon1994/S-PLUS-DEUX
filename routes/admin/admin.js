@@ -21,6 +21,11 @@ router.get("/users", [verify, adminAccess], require("./getUsers"));
 // /api/admin/profile
 router.get("/profile/:id", [verify, adminAccess], require("./userProfile"));
 
+//ADMIN GET POSTS
+
+// /api/admin/allPosts
+router.get("/allPosts/:id", [verify, adminAccess], require("./getPosts"));
+
 ///ADMIN DELETE POST
 // /api/admin/deletePost
 router.delete(

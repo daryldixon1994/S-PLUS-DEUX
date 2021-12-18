@@ -43,6 +43,9 @@ const InfosSchema = new Schema(
         occupation: {
             type: "string",
         },
+        favs: {
+            type: ["string"],
+        },
     },
     { timestamps: true }
 );

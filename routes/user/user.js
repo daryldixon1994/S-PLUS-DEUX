@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const UserInfos = require("../../models/infos");
 const verify = require("../../middlewares/verifyToken");
 const userAccess = require("../../middlewares/userAccess");
 const upload = require("../../middlewares/upload");
@@ -10,7 +9,7 @@ router.post("/register", require("./user.service/register"));
 
 ///USER LOGN
 // /api/user/login
-router.post("/login/:id", userAccess, require("./user.service/login"));
+router.post("/login", userAccess, require("./user.service/login"));
 
 ///USER ADD INFORMATIONS
 // /api/user/informations
@@ -98,6 +97,10 @@ router.get(
 //FILTER POSTS LIST BY LOCATION AND PRICE
 // /api/user/posts/price
 router.get("/posts/price", require("./posts/filterPostsByLocationAndPrice"));
+
+//USER SAVE POSTS TO FAV LIST
+// /api/user/savePost
+router.put("/savePost", [verify, userAccess], require("./posts/savePost"))
 
 ///USER REPORT PROFILE
 // /api/user/report
