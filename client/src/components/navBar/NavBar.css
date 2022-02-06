@@ -1,0 +1,95 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+}
+#nav-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav {
+    /* border: 1px blue solid; */
+    width: 100%;
+    min-height: 60px;
+    position: absolute;
+    z-index: 5;
+    display: grid;
+    grid-template: 1fr/15% 40% 45%;
+    transition: 0.6s ease-in;
+}
+.change-nav {
+    background-color: rgb(99, 99, 99);
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    transition: 0.4s ease-out;
+}
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+}
+.logo-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 2em;
+    margin-left: 3%;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li {
+    list-style: none;
+    margin-left: 5%;
+}
+a {
+    color: inherit;
+    font-weight: bold;
+    border: 1px rgba(255, 255, 255, 0) solid;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+a:hover {
+    border-bottom: 2px black solid;
+}
+.search-bar {
+    /* border: 2px rgba(68, 68, 68, 0.37) solid; */
+    /* margin: 1% 0%; */
+    border-radius: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hidden-search-bar {
+    display: none;
+}
+input[type="text"] {
+    width: 90%;
+    padding: 10px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgba(204, 204, 204, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.76);
+    transition: 0.6s ease-in;
+}
+::placeholder {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Raleway", sans-serif;
+}
+input[type="text"]:focus {
+    outline: none;
+}
